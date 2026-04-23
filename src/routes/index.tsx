@@ -1,26 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { GrowlerExperience } from "@/components/growler/growler-experience";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "GROWLER — AI Threat Intelligence Engine" },
+      {
+        name: "description",
+        content:
+          "Immersive AI intelligence console for live detection, forensic analysis, and suppression of illegal digital content.",
+      },
+      { property: "og:title", content: "GROWLER — AI Threat Intelligence Engine" },
+      {
+        property: "og:description",
+        content:
+          "Live intelligence interface for detecting suspicious domains, analyzing harmful content, and orchestrating rapid response.",
+      },
+      { name: "twitter:title", content: "GROWLER — AI Threat Intelligence Engine" },
+      {
+        name: "twitter:description",
+        content:
+          "Interactive threat intelligence console for real-time AI-powered detection and forensic extraction.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return <GrowlerExperience />;
 }
