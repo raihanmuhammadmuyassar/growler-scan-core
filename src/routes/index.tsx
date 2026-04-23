@@ -9,19 +9,19 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Immersive AI intelligence console for live detection, forensic analysis, and suppression of illegal digital content.",
+          "Immersive AI intelligence console for detecting illegal content, analyzing threat signals, preserving evidence, and orchestrating rapid suppression.",
       },
       { property: "og:title", content: "GROWLER — AI Threat Intelligence Engine" },
       {
         property: "og:description",
         content:
-          "Live intelligence interface for detecting suspicious domains, analyzing harmful content, and orchestrating rapid response.",
+          "Live intelligence interface for analyzing illegal content networks, synthetic abuse escalation, and adaptive intervention workflows.",
       },
       { name: "twitter:title", content: "GROWLER — AI Threat Intelligence Engine" },
       {
         name: "twitter:description",
         content:
-          "Interactive threat intelligence console for real-time AI-powered detection and forensic extraction.",
+          "Interactive threat intelligence console for real-time AI detection, forensic extraction, and quantified suppression decisions.",
       },
     ],
   }),
