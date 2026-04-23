@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import {
   Activity,
   Binary,
@@ -525,7 +527,7 @@ function TraceNode({
   title,
   detail,
 }: {
-  icon: React.ReactNode;
+  icon: ReactNode;
   title: string;
   detail: string;
 }) {
