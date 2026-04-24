@@ -30,11 +30,12 @@ import {
   GrowlerStatusChip,
   GrowlerThreatMeter,
 } from "./growler-primitives";
+import growlerFilterLogo from "@/assets/growler-filter-logo.png";
 
 const bootLines = [
-  "Initializing GROWLER Engine...",
+  "Initializing GROWLER FILTER Engine...",
   "Scanning Global Network...",
-  "Threat Detection System: ACTIVE",
+  "Content Filtering System: ACTIVE",
 ];
 
 const liveFeed = [
@@ -271,8 +272,13 @@ export function GrowlerExperience() {
           <div className="console-panel rounded-lg px-4 py-4 sm:px-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
-                <GrowlerStatusChip label="Threat Monitoring Active" tone="signal" />
-                <span className="console-label">GROWLER AI System</span>
+                <img
+                  src={growlerFilterLogo}
+                  alt="Growler Filter logo"
+                  className="h-8 w-auto"
+                />
+                <GrowlerStatusChip label="Content Filtering Active" tone="signal" />
+                <span className="console-label">Growler Filter System</span>
               </div>
               <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
                 <span className="signal-chip">LAT 51.5074 • LON 0.1278</span>
@@ -293,22 +299,22 @@ export function GrowlerExperience() {
               </div>
 
               <div className="space-y-4">
-                <p className="console-kicker">AI Threat Intelligence Engine</p>
+                <p className="console-kicker">Illegal Content Filtering Engine</p>
                 <h1 className="console-title glitch-text max-w-4xl text-balance">
-                  GROWLER — Intelligence Against Illegal Content
+                  Growler Filter — Institutional Defense Against Illegal Content
                 </h1>
                 <p className="console-copy text-base sm:text-lg">
-                  Real-time AI-powered detection, analysis, and suppression of harmful digital ecosystems.
+                  Real-time content filtering detection, analysis, and suppression of harmful digital ecosystems for ISPs, governments, and platform operators.
                 </p>
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button className="justify-between font-mono uppercase" size="lg" variant="signal">
-                  Launch Interface
+                  Contact Person
                   <ChevronRight />
                 </Button>
                 <Button className="font-mono uppercase" size="lg" variant="console">
-                  Observe Live Signals
+                  Job Opening
                 </Button>
               </div>
             </div>
@@ -317,7 +323,7 @@ export function GrowlerExperience() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="console-label">System Overview</p>
-                  <p className="mt-2 text-lg font-medium">Escalation curves now exceed legacy blocking capacity</p>
+                  <p className="mt-2 text-lg font-medium">Escalation curves now exceed legacy filtering capacity</p>
                 </div>
                 <Radar className="text-primary" />
               </div>
@@ -342,8 +348,8 @@ export function GrowlerExperience() {
 
         <section className="console-section space-y-6">
           <GrowlerSectionHeading
-            eyebrow="Live Threat Feed"
-            title="Continuous threat discovery across abuse media, gambling ecosystems, trafficking forums, and covert link maps"
+            eyebrow="Live Filtering Feed"
+            title="Continuous content filtering detection across abuse media, gambling ecosystems, trafficking forums, and covert link maps"
             description="Illegal content is not a narrow category anymore. It is a scaled, adaptive underground economy powered by synthetic media, crypto rails, and rapid infrastructure rotation."
           />
           <div className="grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
@@ -445,7 +451,7 @@ export function GrowlerExperience() {
         <section className="console-section space-y-6">
           <GrowlerSectionHeading
             eyebrow="Suppression Benchmark"
-            title="ISP and government blocking remains necessary, but current methods are inconsistent, overbroad, and easy to evade"
+            title="ISP and government filtering remains necessary, but current methods are inconsistent, overbroad, and easy to evade"
             description="Blocking cannot be the whole answer when infrastructure changes faster than orders propagate and enforcement varies by provider, jurisdiction, and technical capacity."
           />
           <div className="grid gap-4 lg:grid-cols-2">
@@ -466,7 +472,7 @@ export function GrowlerExperience() {
             <GrowlerPanel className="surface-glow">
               <div className="flex items-center gap-3">
                 <ShieldCheck className="text-primary" />
-                <h3 className="text-xl font-medium">GROWLER AI</h3>
+                <h3 className="text-xl font-medium">Growler Filter</h3>
               </div>
               <div className="mt-6 space-y-3">
                 {growlerMethods.map((item) => (
@@ -491,9 +497,9 @@ export function GrowlerExperience() {
 
         <section className="console-section space-y-6">
           <GrowlerSectionHeading
-            eyebrow="Inside the GROWLER Engine"
+            eyebrow="Inside the Growler Filter Engine"
             title="Five layers coordinate signal intake, semantic reasoning, behavioral modeling, historical comparison, and final decisions"
-            description="GROWLER moves from static blocking to intelligent evaluation by combining reputational, relational, semantic, and human-validated evidence."
+            description="Growler Filter moves from static blocking to intelligent evaluation by combining reputational, relational, semantic, and human-validated evidence."
           />
           <div className="grid gap-3 lg:grid-cols-5">
             {engineLayers.map((layer, index) => (
@@ -715,15 +721,15 @@ export function GrowlerExperience() {
                 <p className="console-kicker">Final Interface Access</p>
                 <h2 className="console-title max-w-3xl text-balance">Request System Access</h2>
                 <p className="console-copy text-sm sm:text-base">
-                  Authorized teams gain access to live intelligence, forensic extraction workflows, adaptive suppression controls, and persistent historical analytics.
+                  Authorized teams gain access to live filtering intelligence, forensic extraction workflows, adaptive suppression controls, and persistent historical analytics.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <Button className="font-mono uppercase" size="lg" variant="signal">
-                  Request Authorization
+                  Contact Person
                 </Button>
                 <Button className="font-mono uppercase" size="lg" variant="console">
-                  Contact Operations
+                  Job Opening
                 </Button>
               </div>
             </div>
@@ -732,8 +738,11 @@ export function GrowlerExperience() {
 
         <footer className="border-t border-border py-6">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-mono text-sm text-foreground">GROWLER AI System</p>
-            <p className="text-sm text-muted-foreground">Monitoring • Analyzing • Protecting</p>
+            <div className="flex items-center gap-3">
+              <img src={growlerFilterLogo} alt="Growler Filter" className="h-6 w-auto" />
+              <p className="font-mono text-sm text-foreground">Growler Filter System</p>
+            </div>
+            <p className="text-sm text-muted-foreground">Filtering • Analyzing • Protecting</p>
           </div>
         </footer>
       </div>
