@@ -309,12 +309,12 @@ export function GrowlerExperience() {
 
             <div className="space-y-6">
               <div className="space-y-4">
-                <p className="console-kicker">Online Filtering System</p>
+                <p className="console-kicker">Final Interface System</p>
                 <h1 className="console-title glitch-text max-w-2xl text-balance">
-                  Growler Filter System
+                  Growler Online Filter System
                 </h1>
                 <p className="console-copy text-base sm:text-lg">
-                  Advanced multi-layer content filtering engine for institutional defense against illegal content — built for ISPs, governments, and platform operators.
+                  Advanced AI-powered multi-layer filtering system designed to monitor, analyze, and suppress illegal digital content across networks in real-time.
                 </p>
               </div>
 
