@@ -31,6 +31,7 @@ import {
   GrowlerThreatMeter,
 } from "./growler-primitives";
 import growlerFilterLogo from "@/assets/growler-filter-logo.png";
+import growlerFilterHero from "@/assets/growler-filter-hero.png";
 
 const bootLines = [
   "Initializing GROWLER FILTER Engine...",
@@ -284,6 +285,17 @@ export function GrowlerExperience() {
                 <span className="signal-chip">LAT 51.5074 • LON 0.1278</span>
                 <span className="signal-chip">UTC 03:15:44</span>
               </div>
+            </div>
+          </div>
+
+          <div className="relative flex justify-center pt-10">
+            <div className="surface-glow relative w-full max-w-3xl overflow-hidden rounded-xl border border-border bg-background/40">
+              <img
+                src={growlerFilterHero}
+                alt="Growler Filter — Intelligence Against Illegal Content"
+                className="h-auto w-full object-contain"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
           </div>
 
