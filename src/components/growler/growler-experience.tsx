@@ -30,7 +30,7 @@ import {
   GrowlerStatusChip,
   GrowlerThreatMeter,
 } from "./growler-primitives";
-import { GrowlerLogoMark } from "./growler-logo-mark";
+import growlerFilterLogo from "@/assets/growler-filter-logo.png";
 
 const bootLines = [
   "Initializing GROWLER FILTER Engine...",
@@ -268,17 +268,17 @@ export function GrowlerExperience() {
     <main className="console-stage terminal-noise dark min-h-screen overflow-hidden bg-background text-foreground">
       <div className="data-stream" aria-hidden="true" />
       <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-4 sm:px-6 lg:px-8">
-        <section className="console-section pt-4 sm:pt-6">
-          <div className="console-panel rounded-lg px-4 py-3 sm:px-6">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <section className="console-section min-h-[92svh] pt-6 sm:pt-10">
+          <div className="console-panel rounded-lg px-4 py-4 sm:px-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
-                <GrowlerLogoMark className="h-9 w-9" />
-                <div className="flex flex-col">
-                  <span className="font-mono text-sm font-medium tracking-wide text-foreground">GROWLER FILTER</span>
-                  <span className="console-label">Online Filtering System</span>
-                </div>
-                <span className="mx-2 hidden h-6 w-px bg-border sm:block" />
-                <GrowlerStatusChip label="Active" tone="signal" />
+                <img
+                  src={growlerFilterLogo}
+                  alt="Growler Filter logo"
+                  className="h-8 w-auto"
+                />
+                <GrowlerStatusChip label="Content Filtering Active" tone="signal" />
+                <span className="console-label">Growler Filter System</span>
               </div>
               <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
                 <span className="signal-chip">LAT 51.5074 • LON 0.1278</span>
@@ -287,16 +287,8 @@ export function GrowlerExperience() {
             </div>
           </div>
 
-          <div className="grid gap-8 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <div className="hero-spotlight space-y-6">
-              <div className="logo-stage mx-auto w-full max-w-md lg:max-w-lg">
-                <div className="logo-stage__grid" aria-hidden="true" />
-                <div className="logo-stage__radar logo-stage__radar--reverse" aria-hidden="true" />
-                <div className="logo-stage__radar" aria-hidden="true" />
-                <GrowlerLogoMark className="logo-stage__mark" />
-                <div className="logo-stage__scan" aria-hidden="true" />
-              </div>
-
+          <div className="grid gap-6 pt-8 lg:grid-cols-[1.3fr_0.8fr] lg:items-end">
+            <div className="space-y-6">
               <div className="space-y-3">
                 {bootLines.map((line, index) => (
                   <div className="boot-line" key={line} style={{ animationDelay: `${index * 180}ms` }}>
@@ -305,16 +297,14 @@ export function GrowlerExperience() {
                   </div>
                 ))}
               </div>
-            </div>
 
-            <div className="space-y-6">
               <div className="space-y-4">
-                <p className="console-kicker">Final Interface System</p>
-                <h1 className="console-title glitch-text max-w-2xl text-balance">
-                  Growler Online Filter System
+                <p className="console-kicker">Illegal Content Filtering Engine</p>
+                <h1 className="console-title glitch-text max-w-4xl text-balance">
+                  Growler Filter — Institutional Defense Against Illegal Content
                 </h1>
                 <p className="console-copy text-base sm:text-lg">
-                  Advanced AI-powered multi-layer filtering system designed to monitor, analyze, and suppress illegal digital content across networks in real-time.
+                  Real-time content filtering detection, analysis, and suppression of harmful digital ecosystems for ISPs, governments, and platform operators.
                 </p>
               </div>
 
@@ -327,32 +317,32 @@ export function GrowlerExperience() {
                   Job Opening
                 </Button>
               </div>
+            </div>
 
-              <GrowlerPanel className="surface-glow overflow-hidden">
+            <GrowlerPanel className="surface-glow overflow-hidden">
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="console-label">System Overview</p>
-                    <p className="mt-2 text-base font-medium">Escalation curves exceed legacy filtering capacity</p>
+                  <p className="mt-2 text-lg font-medium">Escalation curves now exceed legacy filtering capacity</p>
+                </div>
+                <Radar className="text-primary" />
+              </div>
+              <div className="hud-divider my-5" />
+              <div className="grid gap-4 sm:grid-cols-2">
+                {widgets.map((widget) => (
+                  <GrowlerMetric key={widget.label} {...widget} />
+                ))}
+              </div>
+              <div className="hud-divider my-5" />
+              <div className="grid gap-3 font-mono text-xs text-muted-foreground">
+                {logs.map((log) => (
+                  <div className="flex items-center gap-3" key={log}>
+                    <span className="status-dot" />
+                    <span>{log}</span>
                   </div>
-                  <Radar className="text-primary" />
-                </div>
-                <div className="hud-divider my-4" />
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {widgets.map((widget) => (
-                    <GrowlerMetric key={widget.label} {...widget} />
-                  ))}
-                </div>
-                <div className="hud-divider my-4" />
-                <div className="grid gap-2 font-mono text-xs text-muted-foreground">
-                  {logs.slice(0, 3).map((log) => (
-                    <div className="flex items-center gap-3" key={log}>
-                      <span className="status-dot" />
-                      <span>{log}</span>
-                    </div>
-                  ))}
-                </div>
-              </GrowlerPanel>
-            </div>
+                ))}
+              </div>
+            </GrowlerPanel>
           </div>
         </section>
 
@@ -749,7 +739,7 @@ export function GrowlerExperience() {
         <footer className="border-t border-border py-6">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3">
-              <GrowlerLogoMark className="h-7 w-7" />
+              <img src={growlerFilterLogo} alt="Growler Filter" className="h-6 w-auto" />
               <p className="font-mono text-sm text-foreground">Growler Filter System</p>
             </div>
             <p className="text-sm text-muted-foreground">Filtering • Analyzing • Protecting</p>
