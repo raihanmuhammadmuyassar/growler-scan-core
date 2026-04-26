@@ -288,19 +288,13 @@ export function GrowlerExperience() {
             </div>
           </div>
 
-          <div className="relative flex justify-center pt-10">
-            <div className="surface-glow relative w-full max-w-3xl overflow-hidden rounded-xl border border-border bg-background/40">
+          <div className="grid gap-6 pt-8 lg:grid-cols-[1.3fr_0.8fr] lg:items-end">
+            <div className="space-y-6">
               <img
                 src={growlerFilterHero}
                 alt="Growler Filter — Intelligence Against Illegal Content"
-                className="h-auto w-full object-contain"
+                className="h-auto w-full max-w-md object-contain"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-            </div>
-          </div>
-
-          <div className="grid gap-6 pt-8 lg:grid-cols-[1.3fr_0.8fr] lg:items-end">
-            <div className="space-y-6">
               <div className="space-y-3">
                 {bootLines.map((line, index) => (
                   <div className="boot-line" key={line} style={{ animationDelay: `${index * 180}ms` }}>
