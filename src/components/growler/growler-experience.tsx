@@ -273,11 +273,6 @@ export function GrowlerExperience() {
           <div className="console-panel rounded-lg px-4 py-4 sm:px-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
-                <img
-                  src={growlerFilterLogo}
-                  alt="Growler Filter logo"
-                  className="h-8 w-auto"
-                />
                 <GrowlerStatusChip label="Content Filtering Active" tone="signal" />
                 <span className="console-label">Growler Filter System</span>
               </div>
