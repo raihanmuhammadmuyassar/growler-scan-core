@@ -288,7 +288,7 @@ export function GrowlerExperience() {
               <img
                 src={growlerFilterHero}
                 alt="Growler Filter — Intelligence Against Illegal Content"
-                className="h-auto w-full max-w-md object-contain"
+                className="h-auto w-full max-w-lg object-contain"
               />
               <div className="space-y-3">
                 {bootLines.map((line, index) => (
@@ -740,7 +740,7 @@ export function GrowlerExperience() {
         <footer className="border-t border-border py-6">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3">
-              <img src={growlerFilterLogo} alt="Growler Filter" className="h-6 w-auto" />
+              <img src={growlerFilterLogo} alt="Growler Filter" className="h-10 w-auto object-contain" />
               <p className="font-mono text-sm text-foreground">Growler Filter System</p>
             </div>
             <p className="text-sm text-muted-foreground">Filtering • Analyzing • Protecting</p>
