@@ -745,6 +745,9 @@ export function GrowlerExperience() {
             </div>
             <p className="text-sm text-muted-foreground">Filtering • Analyzing • Protecting</p>
           </div>
+          <div className="mt-3 text-center text-xs text-muted-foreground">
+            The Octagon, Singapore 069534 — leonardronny@gmail.com (Ronny)
+          </div>
         </footer>
       </div>
     </main>
