@@ -737,19 +737,102 @@ export function GrowlerExperience() {
           </GrowlerPanel>
         </section>
 
-        <footer className="border-t border-border py-8">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-3">
-                <img src={growlerFilterLogo} alt="Growler Filter" className="h-10 w-auto object-contain" />
-                <p className="font-mono text-sm text-foreground">Growler Filter System</p>
+        <footer className="relative overflow-hidden border-t border-primary/20 pb-8 pt-12">
+          <div className="absolute left-0 top-0 h-px w-32 bg-primary" />
+          <div className="absolute left-0 top-0 h-8 w-px bg-primary" />
+
+          <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
+            <div className="flex-1 space-y-8">
+              <div className="flex items-center gap-4">
+                <img
+                  src={growlerFilterLogo}
+                  alt="Growler Filter"
+                  className="h-12 w-auto object-contain"
+                />
+                <div>
+                  <p className="mb-1 font-mono text-[10px] uppercase tracking-[0.3em] text-primary/70">
+                    System Core Ident
+                  </p>
+                  <h2 className="font-mono text-2xl font-bold tracking-tight text-foreground">
+                    Growler Filter System
+                  </h2>
+                </div>
               </div>
-              <div className="flex flex-col gap-1 text-xs text-muted-foreground">
-                <span>The Octagon, Singapore 069534</span>
-                <a href="mailto:growlerfilter@gmail.com" className="hover:text-foreground transition-colors">growlerfilter@gmail.com</a>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="pt-1">
+                    <div className="h-1.5 w-1.5 bg-primary" />
+                  </div>
+                  <div className="space-y-1">
+                    <p className="font-mono text-[10px] uppercase text-primary/50">Location_Node</p>
+                    <address className="max-w-[220px] text-sm not-italic leading-relaxed text-muted-foreground">
+                      The Octagon,
+                      <br />
+                      Singapore 069534
+                    </address>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="pt-1">
+                    <div className="h-1.5 w-1.5 bg-primary" />
+                  </div>
+                  <div className="space-y-1">
+                    <p className="font-mono text-[10px] uppercase text-primary/50">Comm_Protocol</p>
+                    <a
+                      href="mailto:growlerfilter@gmail.com"
+                      className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+                    >
+                      growlerfilter@gmail.com
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground sm:text-right">Filtering • Analyzing • Protecting</p>
+
+            <div className="flex flex-col items-start gap-6 md:items-end md:text-right">
+              <div className="space-y-2">
+                <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-primary/40">
+                  Mission_Objectives
+                </p>
+                <p className="font-mono text-xl font-light uppercase tracking-widest text-foreground md:text-2xl">
+                  Filtering <span className="mx-2 text-primary">•</span>
+                  Analyzing <span className="mx-2 text-primary">•</span>
+                  Protecting
+                </p>
+              </div>
+
+              <div className="mt-4 grid grid-cols-2 gap-x-8 gap-y-2 opacity-50">
+                <div className="md:text-right">
+                  <span className="block font-mono text-[9px] text-primary">ENCRYPT_LEVEL</span>
+                  <span className="font-mono text-[11px] text-foreground">AES-256-GCM</span>
+                </div>
+                <div className="md:text-right">
+                  <span className="block font-mono text-[9px] text-primary">UPTIME_RELAY</span>
+                  <span className="font-mono text-[11px] text-foreground">99.998%</span>
+                </div>
+                <div className="md:text-right">
+                  <span className="block font-mono text-[9px] text-primary">LATENCY_MS</span>
+                  <span className="font-mono text-[11px] text-foreground">0.0024</span>
+                </div>
+                <div className="md:text-right">
+                  <span className="block font-mono text-[9px] text-primary">VERSION_BUILD</span>
+                  <span className="font-mono text-[11px] text-foreground">v4.0.9-STABLE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 flex items-center justify-between border-t border-border pt-8">
+            <div className="font-mono text-[10px] text-muted-foreground">
+              © 2026 GROWLER_SYSTEMS_INTL // ALL_RIGHTS_RESERVED
+            </div>
+            <div className="flex gap-4">
+              <div className="h-1 w-1 bg-primary/30" />
+              <div className="h-1 w-1 bg-primary/30" />
+              <div className="h-1 w-1 bg-primary" />
+            </div>
           </div>
         </footer>
       </div>
