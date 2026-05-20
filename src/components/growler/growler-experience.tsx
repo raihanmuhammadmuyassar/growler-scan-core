@@ -737,16 +737,19 @@ export function GrowlerExperience() {
           </GrowlerPanel>
         </section>
 
-        <footer className="border-t border-border py-6">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-3">
-              <img src={growlerFilterLogo} alt="Growler Filter" className="h-10 w-auto object-contain" />
-              <p className="font-mono text-sm text-foreground">Growler Filter System</p>
+        <footer className="border-t border-border py-8">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <img src={growlerFilterLogo} alt="Growler Filter" className="h-10 w-auto object-contain" />
+                <p className="font-mono text-sm text-foreground">Growler Filter System</p>
+              </div>
+              <div className="flex flex-col gap-1 text-xs text-muted-foreground">
+                <span>The Octagon, Singapore 069534</span>
+                <a href="mailto:growlerfilter@gmail.com" className="hover:text-foreground transition-colors">growlerfilter@gmail.com</a>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground">Filtering • Analyzing • Protecting</p>
-          </div>
-          <div className="mt-3 text-center text-xs text-muted-foreground">
-            The Octagon, Singapore 069534 — leonardronny@gmail.com (Ronny)
+            <p className="text-sm text-muted-foreground sm:text-right">Filtering • Analyzing • Protecting</p>
           </div>
         </footer>
       </div>
